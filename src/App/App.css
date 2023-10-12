@@ -1,0 +1,101 @@
+body {
+  background: linear-gradient(45deg, #ff00ff, #ff8000, #ffff00, #00ff80, #0080ff);
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.star-icon.star-filled {
+  color: yellow;
+}
+
+.task-input {
+  margin-bottom: 20px;
+}
+
+.task-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.task-circle {
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.task-text {
+  flex: 1; /* Растягиваем текст таска, чтобы он занимал доступное пространство */
+}
+
+.task-icon {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+
+/* Добавление новой задачи снизу вверх */
+.task-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.task-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.task-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.task-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.task-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.task-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.task-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.task-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.completed-task {
+  text-decoration: line-through;
+}
